@@ -11,14 +11,14 @@ class HomeController extends Controller {
         /*implementar*/ 
         if(ch::isSetCookie($cookieName="logged") == "")
             // $this->render("home");
-            return "teste";
+            $this->redirect("/teste");
         
         else
             // $this->render("signin_signup");
-            echo "teste";
+            echo "index";
             
     }
-    public function teste(){
+    public function teste() {
         echo "teste";
     }
 }

@@ -2,7 +2,7 @@
 namespace src;
 
 class Config {
-    const BASE_DIR = '/projects/StudiumPlataforma/studium-ref/public';
+    const BASE_DIR = '/projects/StudiumPlataforma/studium-platform/public';
 
     const DB_DRIVER = 'mysql';
     const DB_HOST = 'localhost';

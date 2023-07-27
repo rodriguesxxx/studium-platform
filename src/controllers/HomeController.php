@@ -10,12 +10,15 @@ class HomeController extends Controller {
         #checa se o usuario ja esta logado
         /*implementar*/ 
         if(ch::isSetCookie($cookieName="logged") == "")
-            $this->render("home");
+            // $this->render("home");
+            return "teste";
         
         else
-            $this->render("signin_signup");
+            // $this->render("signin_signup");
+            echo "teste";
+            
     }
     public function teste(){
-        return "teste";
+        echo "teste";
     }
 }

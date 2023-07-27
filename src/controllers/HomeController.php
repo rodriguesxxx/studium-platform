@@ -9,10 +9,13 @@ class HomeController extends Controller {
     public function index() {
         #checa se o usuario ja esta logado
         /*implementar*/ 
-        if(ch::isSetCookie($cookieName="logged") == "studiumapp")
-            $this->render("/home");
+        if(ch::isSetCookie($cookieName="logged") == "")
+            $this->render("home");
         
         else
             $this->render("signin_signup");
+    }
+    public function teste(){
+        return "teste";
     }
 }

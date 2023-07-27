@@ -6,16 +6,19 @@ use src\models\service\UserLogin;
 use src\models\utils\CheckUserLogged as check;
 
 class LoginController extends Controller{
-    
-    public function login(){
-        if(check::isLogged())
-            $this->redirect("/");
-        
-        else
-            $this->render("signin_signup");
-    }
 
-    #recebe um post para efetur o login
+    public function login(){
+         return "ola";
+    }
+    
+    // public function login(){
+    //     if(check::isLogged())
+    //         $this->redirect("/");
+        
+    //     else
+    //         $this->render("signin_signup");
+    // }
+
     public function loginAction(){
         $credential = $_POST['credential'];
         $password = $_POST['password'];

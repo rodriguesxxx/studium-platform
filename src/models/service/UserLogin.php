@@ -18,11 +18,14 @@ class UserLogin{
     }
 
     public function login(){
+
         if(UserDao::isValidCredential($this->credential, $this->password)){
-            echo "Logado";
-            exit;
+            cookie::setCookie($cookieName="logged", $cookieValue="studiumapp", $numberDays=365);
+            return true;
         }
-        UserDao::$error = "invalid credential or password!";
-        print_r(UserDao::$error);
+
+        UserDao::$error = "Invalid credential or username!";
+        return false;
+        
     }
 }

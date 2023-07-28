@@ -3,6 +3,7 @@
 namespace src\controllers;
 use \core\Controller;
 use src\models\utils\CheckUserLogged as check;
+use src\models\dao\UserDao;
 use src\models\service\UserRegister;
 
 class RegisterController extends Controller{
@@ -25,12 +26,11 @@ class RegisterController extends Controller{
         $userR = new UserRegister($name, $username, $email, $password);
         $result = $userR->register();
         
-        if(str_word_count($result) > 0)
-
-            return $this->render("signin_signup", [
-                'error' => $result
-            ]);
-
-        return $this->redirect("/");
+        if($result)
+            return $this->redirect("/");
+        
+        return $this->render("signin_signup", [
+            'error' => UserDao::$error
+        ]);
     }
 }

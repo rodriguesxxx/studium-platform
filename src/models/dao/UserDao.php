@@ -28,6 +28,7 @@ abstract class UserDao extends Model{
 
     ### VALIDATIONS ###
     public static function isValidCredential($credential, $passwordInput){
+        
         $query = (parent::select('password')
         ->where('username', $credential)
         ->orWhere('email', $credential)
@@ -48,7 +49,7 @@ abstract class UserDao extends Model{
 
         return !(parent::select()->where([
             'email'=>$email
-        ])->execute()) ? true : UserDao::$error = "not available email address";
+        ])->execute()) ? true : UserDao::$error = "Not available email address!";
     
     }
 
@@ -57,6 +58,6 @@ abstract class UserDao extends Model{
 
         return !(parent::select()->where([
             'username'=>$username
-        ])->execute()) ? true : UserDao::$error = "not available username";
+        ])->execute()) ? true : UserDao::$error = "Not available username!";
     }
 }

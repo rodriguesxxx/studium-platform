@@ -15,9 +15,9 @@ class UserRegister extends User{
         $add = UserDao::add($this);
         if($add === true){
             cookie::setCookie($cookieName="logged", $cookieValue="studiumapp", $numberDays=365);
-            return "";
+            return true;
         }
-         return UserDao::$error;    
+         return false;    
     }
 
     

@@ -9,6 +9,7 @@ use \core\Model;
 abstract class UserDao extends Model{
     static $error;
 
+    ### MAIN FUNCTIONS ###
     public static function add(User $user){
         
         if(UserDao::isAvaibleEmail($user->getEmail()) === true && 
@@ -24,6 +25,18 @@ abstract class UserDao extends Model{
 
         }
         return UserDao::$error;
+    }
+    ### GETERS ###
+
+    public static function getAllInfoById($id){
+        return parent::select()->where('id', $id)->one();
+    }
+
+    public static function getIdByCredential($credential){
+        return parent::select('id') 
+            ->where('username', $credential)
+            ->orWhere('email', $credential)
+            ->one()['id'];
     }
 
     ### VALIDATIONS ###

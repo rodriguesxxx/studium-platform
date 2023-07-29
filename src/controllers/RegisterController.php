@@ -1,9 +1,13 @@
 <?php
 
 namespace src\controllers;
+
 use \core\Controller;
+
 use src\models\utils\CheckUserLogged as check;
+
 use src\models\dao\UserDao;
+
 use src\models\service\UserRegister;
 
 class RegisterController extends Controller{

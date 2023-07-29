@@ -7,6 +7,7 @@ class CookieHandling{
         setcookie($cookieName, $cookieValue, time() + (86400 * $numberDays), "/");
     }
     public static function isSetCookie($cookieName){
+        
         if(isset($_COOKIE[$cookieName])){
             return $_COOKIE[$cookieName];
         }

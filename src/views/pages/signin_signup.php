@@ -7,8 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     
-    <link rel="icon" type="image/png" href="../assets/images/logo.png"/>
-    <link rel="stylesheet" href="<?=$base?>/css/style.css">
+    <link rel="icon" type="image/png" href="<?=$base?>/assets/images/logo.png"/>
+    <link rel="stylesheet" href="<?=$base?>/css/signin_signup.css">
+    <link rel="stylesheet" href="<?=$base?>/css/msgs.css">
     
 
     <title>Studium - Signin and Signup</title>

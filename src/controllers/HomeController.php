@@ -23,7 +23,7 @@ class HomeController extends Controller {
         }
             
         else
-            $this->render("signin_signup");    
+            $this->redirect("/login");    
     }
     
 }

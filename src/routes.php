@@ -8,4 +8,6 @@ $router->get('/login', 'LoginController@login');
 $router->post('/login', 'LoginController@loginAction');
 $router->get('/register', 'RegisterController@register');
 $router->post('/register', 'RegisterController@registerAction');
+$router->get('/forgot', 'ForgotController@forgot');
+
 

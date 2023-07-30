@@ -10,7 +10,7 @@ class Controller {
         exit;
     }
 
-    private function getBaseUrl() {
+    protected function getBaseUrl() {
         $base = (isset($_SERVER['HTTPS']) && strtolower($_SERVER['HTTPS']) == 'on') ? 'https://' : 'http://';
         $base .= $_SERVER['SERVER_NAME'];
         if($_SERVER['SERVER_PORT'] != '80') {

@@ -34,7 +34,13 @@ class RegisterController extends Controller{
             return $this->redirect("/");
         
         return $this->render("signin_signup", [
-            'error' => UserDao::$error
+            'error' => UserDao::$error,
+
+            'errorRegisterInfo' => [
+                'name' => $name,
+                'username' => $username,
+                'email'=> $email,
+            ]
         ]);
     }
 }

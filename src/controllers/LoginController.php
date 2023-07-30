@@ -31,7 +31,10 @@ class LoginController extends Controller{
         }
         
         return $this->render("signin_signup" ,[
-            'error' => UserDao::$error
+            'error' => UserDao::$error,
+            'errorLoginInfo' => [
+                'credential' => $credential,
+            ]
         ]);
 
 

@@ -4,7 +4,7 @@ namespace src\models\dao;
 
 use src\models\service\User;
 use \core\Model;
-
+use Exception;
 
 abstract class UserDao extends Model{
     static $error;
@@ -33,10 +33,14 @@ abstract class UserDao extends Model{
     }
 
     public static function getIdByCredential($credential){
-        return parent::select('id') 
-            ->where('username', $credential)
-            ->orWhere('email', $credential)
-            ->one()['id'];
+        try{
+            return parent::select('id') 
+                ->where('username', $credential)
+                ->orWhere('email', $credential)
+                ->one()['id'];
+        } catch(Exception $e){
+            return false;
+        }
     }
 
     ### VALIDATIONS ###

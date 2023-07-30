@@ -9,5 +9,6 @@ $router->post('/login', 'LoginController@loginAction');
 $router->get('/register', 'RegisterController@register');
 $router->post('/register', 'RegisterController@registerAction');
 $router->get('/forgot', 'ForgotController@forgot');
+$router->post('/forgot', 'ForgotController@forgotAction');
 
 

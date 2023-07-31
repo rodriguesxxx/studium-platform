@@ -10,5 +10,9 @@ $router->get('/register', 'RegisterController@register');
 $router->post('/register', 'RegisterController@registerAction');
 $router->get('/forgot', 'ForgotController@forgot');
 $router->post('/forgot', 'ForgotController@forgotAction');
+$router->get('/change/{id}', 'ChangeController@change');
+$router->get('/change', 'ChangeController@changeAction');
+
+
 
 

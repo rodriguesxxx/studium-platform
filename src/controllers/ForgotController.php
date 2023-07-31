@@ -5,11 +5,17 @@ namespace src\controllers;
 use \core\Controller;
 use src\models\dao\UserDao;
 use src\models\utils\Cryptografy;
+use src\models\utils\CheckUserLogged as check;
 
 class ForgotController extends Controller {
 
     public function forgot(){
-        $this->render('forgot');
+
+        if(check::isLogged())
+            $this->redirect("/");
+        
+        else
+            $this->render("forgot");
     }
 
     public function forgotAction(){
@@ -19,9 +25,15 @@ class ForgotController extends Controller {
 
         if($userID){
 
-            $changePasswordUrl = $this->getBaseUrl() . "/change?id=" . Cryptografy::encrypted($userID);
+            //em alguns casos o id sera criptragrafado mas nao sera descriptografado, isso trata esse bug
+            do{
+                $idEncrypted = Cryptografy::encrypted($userID);
+            } while(Cryptografy::decrypted($idEncrypted) != $userID); 
+
+            $changePasswordUrl = $this->getBaseUrl() . "/change/" . $idEncrypted;
+
+            //enviar essa url por email
             echo $changePasswordUrl;
-            //puxa o email pela credencial e envia a url para a troca da senha        
         }
 
         else{

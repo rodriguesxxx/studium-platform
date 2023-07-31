@@ -18,7 +18,7 @@ class RouterBase {
             foreach($routes[$method] as $route => $callback) {
                 // Identifica os argumentos e substitui por regex
                 $pattern = preg_replace('(\{[a-z0-9]{1,}\})', '([a-z0-9-]{1,})', $route);
-
+                
                 // Faz o match da URL
                 if(preg_match('#^('.$pattern.')*$#i', $url, $matches) === 1) {
                     array_shift($matches);

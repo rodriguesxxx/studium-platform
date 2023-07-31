@@ -13,6 +13,7 @@ use src\models\utils\CheckUserLogged as check;
 class LoginController extends Controller{
     
     public function login(){
+        
         if(check::isLogged())
             $this->redirect("/");
         

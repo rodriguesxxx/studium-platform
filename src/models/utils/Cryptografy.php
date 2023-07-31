@@ -6,18 +6,34 @@ class Cryptografy{
     private static $KEY = 2006;
 
     
-    public static function encrypted($value){
+    public static function encrypted($value) {
         $iv = random_bytes(16); // Gerar um vetor de inicialização aleatório
         $encrypted = openssl_encrypt($value, 'AES-256-CBC', Cryptografy::$KEY , 0, $iv);
-        return base64_encode($iv . $encrypted);
+        $result = base64_encode($iv . $encrypted);
+    
+        // Remover todos os caracteres especiais, mantendo apenas letras e números
+        $result = preg_replace('/[^a-zA-Z0-9]/', '', $result);
+    
+        return $result;
     }
 
-    public static function descrypted($value){
-        $data = base64_decode($value);
-        $iv = substr($data, 0, 16); // Extrair o vetor de inicialização
-        $data = substr($data, 16); // Extrair os dados criptografados
-        return openssl_decrypt($data, 'AES-256-CBC', Cryptografy::$KEY , 0, $iv);
+    public static function decrypted($encryptedValue) {
+        // Adiciona os caracteres especias novamente
+        $paddedEncryptedValue = str_pad($encryptedValue, strlen($encryptedValue) + (4 - strlen($encryptedValue) % 4) % 4, '=', STR_PAD_RIGHT);
+        $paddedEncryptedValue = wordwrap($paddedEncryptedValue, 4, '/', true);
+    
+        // Remover os caracteres especiais adicionados anteriormente
+        $encryptedValue = str_replace(['/', '='], '', $paddedEncryptedValue);
+    
+        $data = base64_decode($encryptedValue);
+        $iv = substr($data, 0, 16);
+        $encrypted = substr($data, 16);
+    
+        $decrypted = openssl_decrypt($encrypted, 'AES-256-CBC', Cryptografy::$KEY, 0, $iv);
+    
+        return $decrypted;
     }
+    
 
 }
 

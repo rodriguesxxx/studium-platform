@@ -26,6 +26,14 @@ abstract class UserDao extends Model{
         }
         return UserDao::$error;
     }
+
+    ### UPDATES ###
+    public static function passwordUpdate($id, $newPassword){
+        parent::update(['password' => $newPassword])
+        ->where('id', $id)
+        ->execute();
+    }
+
     ### GETERS ###
 
     public static function getAllInfoById($id){

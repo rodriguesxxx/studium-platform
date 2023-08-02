@@ -15,7 +15,7 @@ class HomeController extends Controller {
 
         if(check::isLogged()){
 
-            $userID = Cryptografy::descrypted( cookie::isSetCookie("userID") );
+            $userID = Cryptografy::decrypted( cookie::isSetCookie("userID") );
     
             $this->render("home", [
                 'userInfo'=>UserDao::getAllInfoById($userID)

@@ -3,7 +3,11 @@
 namespace src\models\dao;
 
 use src\models\service\User;
+
+use src\models\utils\Cryptografy;
+
 use \core\Model;
+
 use Exception;
 
 abstract class UserDao extends Model{
@@ -60,8 +64,9 @@ abstract class UserDao extends Model{
         ->get());
 
         if(count($query) > 0){
-            $passwordDB = $query[0]['password'];
-            return (password_verify($passwordInput, $passwordDB)) ? true : false;
+            $passwordDb = $query[0]['password'];
+            $passwordDbDescrypted = Cryptografy::decrypted($passwordDb);
+            return ( $passwordInput == $passwordDbDescrypted ) ? true : false;
 
         } else {
             return false;

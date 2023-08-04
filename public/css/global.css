@@ -1,0 +1,12 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Helvetica;
+    font-size:13px;
+    background-color:#f9f6fbcf;
+    margin:0;
+    padding-bottom:50px;
+}

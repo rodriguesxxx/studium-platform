@@ -1,3 +1,5 @@
+@import './global.css';
+@import './header.css';
 @import './home.css';
 @import './defaults.css';
 @import './feed-item.css';

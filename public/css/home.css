@@ -1,21 +1,7 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-body {
-    font-family: Helvetica;
-    font-size:13px;
-    background-color:#f7f0facf;
-    margin:0;
-    padding-bottom:50px;
-}
 .container {
     max-width:1040px;
     margin:auto;
 }
-
-
 .user-area {
     display:flex;
     align-items: center;

@@ -13,6 +13,3 @@ $router->post('/forgot', 'ForgotController@forgotAction');
 $router->get('/change/{id}', 'ChangeController@change');
 $router->post('/change', 'ChangeController@changeAction');
 
-
-
-

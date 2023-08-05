@@ -14,12 +14,12 @@
 <header>
         <nav>
             <ul>
-                <li><a href=""><img src="<?=$base?>/images/logo.png" alt="logo" class="logo"></a></li>
+                <li><a href="<?=$base?>/"><img src="<?=$base?>/images/logo.png" alt="logo" class="logo"></a></li>
                 <li> <button id="search_btn" class="tooltip" data-tooltip="Search"> <i class="fas fa-search    "></i> </button> </li>
                 
                 <li id="space2"></li>
                 
-                <li> <a class="tooltip active" data-tooltip="Home" href="<?=$base?>/home" id="home"> <i class="fas fa-home    "></i> </a> </li>
+                <li> <a class="tooltip active" data-tooltip="Home" href="<?=$base?>/" id="home"> <i class="fas fa-home    "></i> </a> </li>
                 <li> <a class="tooltip" data-tooltip="News" href="#" id="news"> <i class="fas fa-newspaper"></i></i> </a> </li>
                 <li> <a class="tooltip" data-tooltip="Groups" href="#" id="group"> <i class="fas fa-user-friends    "></i> </a></li>
                 <li id="space1"></li>

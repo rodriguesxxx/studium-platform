@@ -317,6 +317,23 @@
     margin:0;
 }
 
+.like-btn {
+    background-image: url('../images/heart-off.png');
+    color: #5F7D95;
+}
+
+.like-btn .on{
+    background-image: url('../images/heart-on.png');
+    color: #FB5252;
+}
+
+.msg-btn{
+    background-image: url('../images/comment.png');
+    color: #5F7D95;
+
+}
+
+
 @media (max-width: 992px) {
     header .head-side-right {
         display:none !important;

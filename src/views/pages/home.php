@@ -9,12 +9,12 @@
                         <div class="box-body">
                             <div class="feed-new-editor m-10 row">
                                 <div class="feed-new-avatar">
-                                    <img src="media/avatars/avatar2.jpg" />
+                                    <img src="<?=$base?>/images/users/22/profile-photo.jpg" />
                                 </div>
                                 <div class="feed-new-input-placeholder">O que você está pensando, Daniel?</div>
                                 <div class="feed-new-input" contenteditable="true"></div>
                                 <div class="feed-new-send">
-                                    <img src="assets/images/send.png" />
+                                    <img src="<?=$base?>/images/send.png" />
                                 </div>
                             </div>
                         </div>
@@ -24,32 +24,30 @@
                         <div class="box-body">
                             <div class="feed-item-head row mt-20 m-width-20">
                                 <div class="feed-item-head-photo">
-                                    <a href=""><img src="media/avatars/avatar2.jpg" /></a>
+                                    <img src="<?=$base?>/images/users/22/profile-photo.jpg" />
                                 </div>
                                 <div class="feed-item-head-info">
                                     <a href=""><span class="fidi-name">Daniel</span></a>
                                     <span class="fidi-action">fez um post</span>
                                     <br/>
-                                    <span class="fidi-date">07/03/2020</span>
+                                    <span class="fidi-date">15/08/2023</span>
                                 </div>
                                 <div class="feed-item-head-btn">
-                                    <img src="assets/images/more.png" />
+                                    <img src="<?=$base?>/images/more.png" />
                                 </div>
                             </div>
                             <div class="feed-item-body mt-10 m-width-20">
-                                Pessoal, tudo bem! Busco parceiros para empreender comigo em meu software.<br/><br/>
-                                Acabei de aprová-lo na Appstore. É um sistema de atendimento via WhatsApp multi-atendentes para auxiliar empresas.<br/><br/>
-                                Este sistema permite que vários funcionários/colaboradores da empresa atendam um mesmo número de WhatsApp, mesmo que estejam trabalhando remotamente, sendo que cada um acessa com um login e senha particular....
+                                Hello World
                             </div>
                             <div class="feed-item-buttons row mt-20 m-width-20">
-                                <div class="like-btn on">56</div>
-                                <div class="msg-btn">3</div>
+                                <div class="like-btn">56</div>
+                                <div class="msg-btn">2</div>
                             </div>
                             <div class="feed-item-comments">
                                 
                                 <div class="fic-item row m-height-10 m-width-20">
                                     <div class="fic-item-photo">
-                                        <a href=""><img src="media/avatars/avatar2.jpg" /></a>
+                                        <img src="<?=$base?>/images/users/22/profile-photo.jpg" />
                                     </div>
                                     <div class="fic-item-info">
                                         <a href="">Daniel</a>
@@ -59,17 +57,17 @@
 
                                 <div class="fic-item row m-height-10 m-width-20">
                                     <div class="fic-item-photo">
-                                        <a href=""><img src="media/avatars/avatar2.jpg" /></a>
+                                        <a href=""><img src="<?=$base?>/images/user.png" /></a>
                                     </div>
                                     <div class="fic-item-info">
-                                        <a href="">Daniel</a>
+                                        <a href="">João</a>
                                         Muito legal, parabéns!
                                     </div>
                                 </div>
 
                                 <div class="fic-answer row m-height-10 m-width-20">
                                     <div class="fic-item-photo">
-                                        <a href=""><img src="media/avatars/avatar2.jpg" /></a>
+                                        <img src="<?=$base?>/images/users/22/profile-photo.jpg" />
                                     </div>
                                     <input type="text" class="fic-item-field" placeholder="Escreva um comentário" />
                                 </div>
@@ -106,7 +104,7 @@
             <div class="modal-content"></div>
         </div>
     </div>
-    <script type="text/javascript" src="assets/js/script.js"></script>
-    <script type="text/javascript" src="assets/js/vanillaModal.js"></script>
+    <script type="text/javascript" src="<?=$base?>/js/pages.js"></script>
+    <script type="text/javascript" src="<?=$base?>/js/vanillaModal.js"></script>
 </body>
 </html>

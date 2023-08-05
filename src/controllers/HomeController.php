@@ -5,7 +5,7 @@ use \core\Controller;
 use src\models\dao\UserDao;
 use src\models\utils\Cryptografy;
 use src\models\utils\CookieHandling as cookie;
-use src\models\utils\CheckUserLogged as check;
+use src\models\utils\CheckUserLogged as checkLogged;
 
 
 class HomeController extends Controller {
@@ -13,7 +13,7 @@ class HomeController extends Controller {
     public function index() {
 
 
-        if(check::isLogged()){
+        if(checkLogged::isLogged()){
 
             $userID = Cryptografy::decrypted( cookie::isSetCookie("userID") );
     

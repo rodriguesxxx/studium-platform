@@ -19,14 +19,14 @@
                 
                 <li id="space2"></li>
                 
-                <li> <a class="tooltip active" data-tooltip="Home" href="#" id="home"> <i class="fas fa-home    "></i> </a> </li>
+                <li> <a class="tooltip active" data-tooltip="Home" href="<?=$base?>/home" id="home"> <i class="fas fa-home    "></i> </a> </li>
                 <li> <a class="tooltip" data-tooltip="News" href="#" id="news"> <i class="fas fa-newspaper"></i></i> </a> </li>
                 <li> <a class="tooltip" data-tooltip="Groups" href="#" id="group"> <i class="fas fa-user-friends    "></i> </a></li>
                 <li id="space1"></li>
-                <li> <button class="tooltip" data-tooltip="Add" id="btn_plus"><i class="fas fa-plus    "></i></button> </li>
-                <li> <button class="tooltip" data-tooltip="Message" id="btn_msg"><i class="fab fa-facebook-messenger    "></i></button></li>
-                <li> <button class="tooltip" data-tooltip="Notification" id="btn_bell"> <i class="fas fa-bell    "></i></button></li>
-                <li>  <button class="tooltip" data-tooltip="Profile" id="btn_profile"><i class="fas fa-user-cog    "></i></button>  </li>
+                <li> <a class="tooltip" data-tooltip="Add" href="#" id="btn_plus"><i class="fas fa-plus    "></i></a> </li>
+                <li> <a class="tooltip" data-tooltip="Message" href="#" id="btn_msg"><i class="fab fa-facebook-messenger    "></i></a></li>
+                <li> <button class="tooltip" data-tooltip="Notification" href="#" id="btn_bell"> <i class="fas fa-bell    "></i></a></li>
+                <li><a class="tooltip" data-tooltip="Profile" href="<?=$base?>/profile" id="btn_profile"><i class="fas fa-user-cog"></i></a></li>
             </ul>
         </nav>
     </header>

@@ -4,6 +4,9 @@ use core\Router;
 $router = new Router();
 
 $router->get('/', 'HomeController@index');
+$router->get('/home', 'HomeController@index');
+$router->get('/profile', 'ProfileController@profile');
+$router->get('/news', 'NewsController@news');
 $router->get('/login', 'LoginController@login');
 $router->post('/login', 'LoginController@loginAction');
 $router->get('/register', 'RegisterController@register');

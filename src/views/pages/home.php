@@ -104,7 +104,5 @@
             <div class="modal-content"></div>
         </div>
     </div>
-    <script type="text/javascript" src="<?=$base?>/js/pages.js"></script>
-    <script type="text/javascript" src="<?=$base?>/js/vanillaModal.js"></script>
-</body>
-</html>
+
+<?=$render('footer')?>

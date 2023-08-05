@@ -1,6 +1,3 @@
-    <hr>
-    <footer>
-        <h2>FOOTER</h2>
-    </footer>
+<script type="text/javascript" src="<?=$base?>/js/pages.js"></script>
 </body>
 </html>

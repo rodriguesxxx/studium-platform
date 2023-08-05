@@ -98,7 +98,7 @@
         </div>
     </div>
   
-    <script src="<?=$base?>/js/sigin_signup.js"></script>
+    <script src="<?=$base?>/js/signin_signup.js"></script>
 </body>
 
 </html>

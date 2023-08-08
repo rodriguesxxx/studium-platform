@@ -13,7 +13,7 @@ class HomeController extends Controller {
     public function index() {
 
 
-        if(checkLogged::isLogged()){
+        if( checkLogged::isLogged() ){
 
             $userID = Cryptografy::decrypted( cookie::isSetCookie("userID") );
     

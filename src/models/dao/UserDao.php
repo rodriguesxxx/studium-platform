@@ -73,6 +73,15 @@ abstract class UserDao extends Model{
         }
     }
 
+    public static function isValidId($id){
+        
+        $query = (parent::select()
+        ->where('id', $id)
+        ->get());
+
+        return ( count($query) > 0 ) ? true : false;
+    }
+
 
     ### AVAIBLES VALIDATIONS###
     public static function isAvaibleEmail($email){

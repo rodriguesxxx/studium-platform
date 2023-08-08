@@ -64,9 +64,9 @@ abstract class UserDao extends Model{
         ->get());
 
         if(count($query) > 0){
+            
             $passwordDb = $query[0]['password'];
-            $passwordDbDescrypted = Cryptografy::decrypted($passwordDb);
-            return ( $passwordInput == $passwordDbDescrypted ) ? true : false;
+            return ( password_verify($passwordInput, $passwordDb) ) ? true : false;
 
         } else {
             return false;

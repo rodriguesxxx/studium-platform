@@ -11,7 +11,6 @@ class CheckUserLogged{
     public static function isLogged(){
 
         $userIdDesc = Cryptografy::decrypted( CH::isSetCookie("userID") );
-        echo $userIdDesc;
         $isValidId = UserDao::isValidId( $userIdDesc );
 
         if( CH::isSetCookie("logged") == "studiumapp" && $isValidId )

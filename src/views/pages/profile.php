@@ -1,2 +1,6 @@
 <?=$render('header')?>
+
+
+
+
 <?=$render('footer')?>

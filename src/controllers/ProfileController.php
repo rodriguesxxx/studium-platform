@@ -12,8 +12,14 @@ class ProfileController extends Controller {
 
     public function profile(){
 
+        
         if(checkLogged::isLogged()){
-            $this->render('profile');
+            $userID = $_SESSION['userID'];
+            $fullName = UserDao::getNameById( $userID );
+            
+            $this->render('profile',
+                ['fullName' => $fullName]
+            );
         }
         else{
             $this->redirect('signin_signup');

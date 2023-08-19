@@ -9,9 +9,9 @@
                         <div class="box-body">
                             <div class="feed-new-editor m-10 row">
                                 <div class="feed-new-avatar">
-                                    <img src="<?=$base?>/images/users/22/profile-photo.jpg" />
+                                    <img src="<?=$base?>/images/user.png" />
                                 </div>
-                                <div class="feed-new-input-placeholder">O que você está pensando, Daniel?</div>
+                                <div class="feed-new-input-placeholder">O que você está pensando, <?= $firstName ?>?</div>
                                 <div class="feed-new-input" contenteditable="true"></div>
                                 <div class="feed-new-send">
                                     <img src="<?=$base?>/images/send.png" />
@@ -24,7 +24,7 @@
                         <div class="box-body">
                             <div class="feed-item-head row mt-20 m-width-20">
                                 <div class="feed-item-head-photo">
-                                    <img src="<?=$base?>/images/users/22/profile-photo.jpg" />
+                                    <img src="<?=$base?>/images/user.png" />
                                 </div>
                                 <div class="feed-item-head-info">
                                     <a href=""><span class="fidi-name">Daniel</span></a>
@@ -47,7 +47,8 @@
                                 
                                 <div class="fic-item row m-height-10 m-width-20">
                                     <div class="fic-item-photo">
-                                        <img src="<?=$base?>/images/users/22/profile-photo.jpg" />
+                                        <img src="<?=$base?>/images/user.png" />
+
                                     </div>
                                     <div class="fic-item-info">
                                         <a href="">Daniel</a>
@@ -67,7 +68,7 @@
 
                                 <div class="fic-answer row m-height-10 m-width-20">
                                     <div class="fic-item-photo">
-                                        <img src="<?=$base?>/images/users/22/profile-photo.jpg" />
+                                        <img src="<?=$base?>/images/user.png" />
                                     </div>
                                     <input type="text" class="fic-item-field" placeholder="Escreva um comentário" />
                                 </div>

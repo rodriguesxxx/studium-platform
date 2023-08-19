@@ -16,9 +16,12 @@ class HomeController extends Controller {
         if( checkLogged::isLogged() ){
 
             $userID = Cryptografy::decrypted( cookie::isSetCookie("userID") );
-    
+            $_SESSION['userID'] = $userID;
+
+            $firstName = explode( " ", UserDao::getNameById( $userID ) )[0];
+
             $this->render("home", [
-                'userInfo'=>UserDao::getAllInfoById($userID)
+                'firstName'=>$firstName
             ]);
         }
             

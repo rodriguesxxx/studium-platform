@@ -5,13 +5,13 @@
 <div class="row">
     <div class="box flex-1 border-top-flat">
         <div class="box-body">
-            <div class="profile-cover" style="background-image: url('media/covers/cover.jpg');"></div>
+            <div class="profile-cover" style="background-image: url('<?= $base ?>/images/profile-cover.jpg');"></div>
             <div class="profile-info m-20 row">
                 <div class="profile-info-avatar">
-                    <img src="media/avatars/avatar.jpg" />
+                    <img src="<?= $base ?>/images/user.png" />
                 </div>
                 <div class="profile-info-name">
-                    <div class="profile-info-name-text">Daniel Rodrigues</div>
+                    <div class="profile-info-name-text"><?= $fullName ?></div>
                     <div class="profile-info-location">Jequitinhonha</div>
                 </div>
                 <div class="profile-info-data row">
@@ -41,17 +41,17 @@
             <div class="box-body">
                 
                 <div class="user-info-mini">
-                    <img src="assets/images/calendar.png" />
-                    16/08/2006 (16 anos)
+                    <img src="<?= $base ?>/images/calendar.png" />
+                    16/08/2006 (17 anos)
                 </div>
 
                 <div class="user-info-mini">
-                    <img src="assets/images/pin.png" />
+                    <img src="<?= $base ?>/images/pin.png" />
                     Minas Gerais, Brasil
                 </div>
 
                 <div class="user-info-mini">
-                    <img src="assets/images/work.png" />
+                    <img src="<?= $base ?>/images/work.png" />
                     Tesla Inc.
                 </div>
 
@@ -208,7 +208,7 @@
                         <div class="box-body">
                             <div class="feed-item-head row mt-20 m-width-20">
                                 <div class="feed-item-head-photo">
-                                    <img src="<?=$base?>/images/users/22/profile-photo.jpg" />
+                                    <img src="<?=$base?>/images/user.png" />
                                 </div>
                                 <div class="feed-item-head-info">
                                     <a href=""><span class="fidi-name">Daniel</span></a>
@@ -231,7 +231,7 @@
                                 
                                 <div class="fic-item row m-height-10 m-width-20">
                                     <div class="fic-item-photo">
-                                        <img src="<?=$base?>/images/users/22/profile-photo.jpg" />
+                                        <img src="<?=$base?>/images/user.png" />
                                     </div>
                                     <div class="fic-item-info">
                                         <a href="">Daniel</a>
@@ -251,7 +251,7 @@
 
                                 <div class="fic-answer row m-height-10 m-width-20">
                                     <div class="fic-item-photo">
-                                        <img src="<?=$base?>/images/users/22/profile-photo.jpg" />
+                                        <img src="<?=$base?>/images/user.png" />
                                     </div>
                                     <input type="text" class="fic-item-field" placeholder="Escreva um comentário" />
                                 </div>

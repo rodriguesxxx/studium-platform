@@ -55,6 +55,18 @@ abstract class UserDao extends Model{
         }
     }
 
+    public static function getNameById( $id ){
+        try{
+            
+            return parent::select('name')
+                ->where('id', $id)
+                ->one()['name'];
+
+        } catch(Exception $e){
+            return false;
+        }
+
+    }
     ### VALIDATIONS ###
     public static function isValidCredential($credential, $passwordInput){
         

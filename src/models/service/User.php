@@ -1,6 +1,8 @@
 <?php
 
 namespace src\models\service;
+
+
 class User{
     private $name;
     private $username;
@@ -20,14 +22,16 @@ class User{
     }
 
     public function setUsername($username){
-        $this->username = strtolower(str_replace(" ", "", $username));
+        $this->username = $username;
     }
     public function setEmail($email){
         $this->email = $email;
     }
     public function setPassword($password){
+
         $password_encrypted = password_hash($password, PASSWORD_DEFAULT);
         $this->password = $password_encrypted;
+
     }
 
     public function getName(){

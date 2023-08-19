@@ -13,7 +13,7 @@ use src\models\utils\Cryptografy;
 class UserRegister extends User{
     
     public function register(){
-
+        
         $add = UserDao::add($this);
         
         if($add === true){

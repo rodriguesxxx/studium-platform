@@ -14,10 +14,11 @@ class CheckUserLogged{
         
         $isValidId = UserDao::isValidId( $userIdDescrypted );
 
-        if( CH::isSetCookie("logged") && $isValidId )
+        if( CH::isSetCookie("logged") && $isValidId ){
             return true;
-        else
+        } else{
             return false;
+        }
     }
     
 }

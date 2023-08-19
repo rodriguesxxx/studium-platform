@@ -20,13 +20,13 @@ class HomeController extends Controller {
 
             $firstName = explode( " ", UserDao::getNameById( $userID ) )[0];
 
-            $this->render("home", [
+            return $this->render("home", [
                 'firstName'=>$firstName
             ]);
         }
             
         else
-            $this->redirect("/login");    
+            return $this->redirect("/login");    
     }
     
 }

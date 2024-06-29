@@ -1,2 +1,2 @@
 # studium-platform
-Study platform of the Federal Institute of Northern Minas Gerais
+Plataforma de estudos criada com PHP puro, sem o uso de framework.
